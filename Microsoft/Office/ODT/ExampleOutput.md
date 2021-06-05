@@ -12,5 +12,5 @@ It took roughly 7 minutes for the installation to complete.
 [6/4/2021 9:35:20 PM] Configured .XML Download URL: https://raw.githubusercontent.com/johngagefaulkner/PowerShell/main/Microsoft/Office/ODT/Configurations/Custom-Microsoft-365-Apps-for-Enterprise-Configuration.xml
 [6/4/2021 9:35:20 PM] Download Complete: C:\ODT\Custom-Microsoft-365-Apps-for-Enterprise-Configuration.xml
 [6/4/2021 9:35:20 PM] Launching 'Setup.exe' with params '/configure' and C:\ODT\Custom-Microsoft-365-Apps-for-Enterprise-Configuration.xml
-[6/4/2021 9:42:14 PM] Installation launched successfully!
+[6/4/2021 9:42:14 PM] Installation completed successfully!
 ```
