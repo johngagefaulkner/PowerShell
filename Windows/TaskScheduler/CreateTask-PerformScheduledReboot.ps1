@@ -20,16 +20,23 @@ $taskAction = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-File
 $taskTrigger = New-ScheduledTaskTrigger -Daily -At '3:00 AM'
 $myTask = New-ScheduledTask -Action $taskAction -Trigger $taskTrigger -Description $taskDescription
 
-# Inform user the scheduled task is being created
+# Inform user the script is launching
+Write-Host 'Initializing script...'
+
+# Verify the 'C:\Scripts' folder exists, create it if it doesn't
 Write-Host 'Verifying the folder "C:\Scripts\" exists... ' -NoNewline
 $dirResult = New-Item -ItemType Directory -Path "C:\" -Name "Scripts" -Force |Out-Null
 Write-Host "Done!" -ForegroundColor Green
 
+# Download the "RebootPC.ps1" script
 Write-Host "Downloading required scripts, please wait... " -NoNewline
 $ProgressPreference = 'SilentlyContinue'
 Invoke-WebRequest -UseBasicParsing -Uri $taskUrl -OutFile $taskScriptPath
 Write-Host "Done!" -ForegroundColor Green
 
+# Create the Scheduled Task
 Write-Host "Creating Scheduled Task to reboot the PC daily at 3:00AM, please wait... " -NoNewline
 Register-ScheduledTask "$taskName" -InputObject $myTask -Force |Out-Null
 Write-Host "Done!" -ForegroundColor Green
+
+## Done
