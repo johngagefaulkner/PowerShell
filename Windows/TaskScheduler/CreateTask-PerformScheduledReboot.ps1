@@ -1,1 +1,1 @@
-Write-Host $env:computername
+Start-Process -FilePath "notepad.exe"
