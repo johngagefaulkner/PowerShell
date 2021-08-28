@@ -8,7 +8,9 @@
     - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer?view=powershell-7.1
 #>
 Clear-Host
+Start-Transcript -Path "C:\Users\Public\Transcript-CreateTask-PerformScheduledReboot.txt" -Append -Force
 Write-Host "[PowerShell Script: CreateTask-PerformScheduledReboot.ps1]"
+Write-Host ' '
 
 # Define Variables
 ## Run Local File:  -Argument '-File C:\scripts\Get-LatestAppLog.ps1'
@@ -20,23 +22,18 @@ $taskAction = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-File
 $taskTrigger = New-ScheduledTaskTrigger -Daily -At '3:00 AM'
 $myTask = New-ScheduledTask -Action $taskAction -Trigger $taskTrigger -Description $taskDescription
 
-# Inform user the script is launching
-Write-Host 'Initializing script...'
-
-# Verify the 'C:\Scripts' folder exists, create it if it doesn't
+# Inform user the scheduled task is being created
 Write-Host 'Verifying the folder "C:\Scripts\" exists... ' -NoNewline
 $dirResult = New-Item -ItemType Directory -Path "C:\" -Name "Scripts" -Force |Out-Null
 Write-Host "Done!" -ForegroundColor Green
 
-# Download the "RebootPC.ps1" script
 Write-Host "Downloading required scripts, please wait... " -NoNewline
 $ProgressPreference = 'SilentlyContinue'
 Invoke-WebRequest -UseBasicParsing -Uri $taskUrl -OutFile $taskScriptPath
 Write-Host "Done!" -ForegroundColor Green
 
-# Create the Scheduled Task
 Write-Host "Creating Scheduled Task to reboot the PC daily at 3:00AM, please wait... " -NoNewline
 Register-ScheduledTask "$taskName" -InputObject $myTask -Force |Out-Null
 Write-Host "Done!" -ForegroundColor Green
-
-## Done
+Write-Host ' '
+Stop-Transcript
