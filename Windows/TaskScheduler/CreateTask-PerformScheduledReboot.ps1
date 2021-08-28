@@ -29,11 +29,13 @@ Write-Host "Done!" -ForegroundColor Green
 
 Write-Host "Downloading required scripts, please wait... " -NoNewline
 $ProgressPreference = 'SilentlyContinue'
-Invoke-WebRequest -UseBasicParsing -Uri $taskUrl -OutFile $taskScriptPath
+#Invoke-WebRequest -UseBasicParsing -Uri $taskUrl -OutFile $taskScriptPath
+Import-Module BitsTransfer -Force
+Start-BitsTransfer -Source $taskUrl -Destination $taskScriptPath
 Write-Host "Done!" -ForegroundColor Green
 
 Write-Host "Creating Scheduled Task to reboot the PC daily at 3:00AM, please wait... " -NoNewline
-Register-ScheduledTask "$taskName" -InputObject $myTask -Force |Out-Null
+Register-ScheduledTask $taskName -InputObject $myTask -Force |Out-Null
 Write-Host "Done!" -ForegroundColor Green
 Write-Host ' '
 Stop-Transcript
