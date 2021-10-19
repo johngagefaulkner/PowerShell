@@ -8,9 +8,9 @@
 Clear-Host
 
 # Define Variables
-$logOutputDir = ""
-$sourceDir = ""
-$targetDir = ""
+$logOutputDir = "^$logOutputDir^"
+$sourceDir = "^$sourceDir^"
+$targetDir = "^$targetDir^"
 
 Start-Transcript -OutputDirectory $logOutputDir -Append -Force -IncludeInvocationHeader
 Write-Host "[Convert-XlsToXlsx]"
