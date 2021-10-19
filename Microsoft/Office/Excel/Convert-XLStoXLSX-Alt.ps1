@@ -73,7 +73,7 @@ function Convert-XlsToXlsx
       $extension = [System.Io.Path]::GetExtension($_)
       if ($extension -ne '.xls') 
       { 
-        Write-Host "[WARN] File Extension not .XLS, skipping: $_" -ForegroundColor Yellow
+        Write-Host "[MSG],Warning,Skipped,File Extension not .XLS, $_" -ForegroundColor Yellow
         continue 
       } 
   
