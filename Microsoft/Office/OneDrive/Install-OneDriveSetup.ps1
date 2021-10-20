@@ -22,7 +22,7 @@ Write-Information "Log initialized..."
 
 # Download the OneDrive Setup utility
 Write-Information "Downloading OneDrive client, please wait..."
-#Invoke-WebRequest -Uri $fileUrl -UseBasicParsing -OutFile $filePath
+Invoke-WebRequest -Uri $fileUrl -UseBasicParsing -OutFile $filePath
 Write-Information "Download complete!"
 
 # Kill all running instances of OneDrive
