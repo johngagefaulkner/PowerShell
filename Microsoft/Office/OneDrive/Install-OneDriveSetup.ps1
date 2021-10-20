@@ -13,7 +13,8 @@ $rootDir = "C:\MDM\"
 $cachePath = "C:\MDM\Cache\"
 $logPath = "C:\MDM\Cache\OneDriveSetup.log"
 $filePath = "C:\MDM\Cache\OneDriveSetup.exe"
-$fileUrl = "https://oneclient.sfx.ms/Win/Insiders/21.139.0711.0001/amd64/OneDriveSetup.exe"
+#$fileUrl = "https://go.microsoft.com/fwlink/?linkid=860984"
+$fileUrl = "https://oneclient.sfx.ms/Win/Prod/21.196.0921.0007/amd64/OneDriveSetup.exe"
 $ProgressPreference = 'SilentlyContinue'
 
 # Initialize Log
