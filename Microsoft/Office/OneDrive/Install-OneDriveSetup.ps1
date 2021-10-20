@@ -27,8 +27,8 @@ Write-Information "Download complete!"
 
 # Kill all running instances of OneDrive
 Write-Information "Killing all instances of OneDrive, please wait..."
-$procResult = Get-Process -Name "OneDrive.exe" |Stop-Process #taskkill /im onedrive.exe /f
-Write-Information "[Result] $procResult"
+taskkill /im onedrive.exe /f
+#$procResult = Get-Process -Name "OneDrive.exe" |Stop-Process
 
 # Launch the OneDrive installation
 Write-Information "Launching OneDriveSetup.exe, please wait... "
