@@ -12,6 +12,9 @@ Get-AppxProvisionedPackage -Online |Select-Object Version,PackageName,DisplayNam
 ```
 ---
 ## AppxPackages
+- **Description:** Obtains a list of all `AppxPackages` installed for All Users on the PC.
+- **Script Output:** Results are trimmed, including only the `Name`, `Version`, `Package Family Name`, `Package Full Name` and `Install Location`, converted to JSON and exported to a file in the `C:\Users\Public\` directory.
+- **Script Example:** Using PowerShell 7.20
 
 ```powershell
 Get-AppxPackage -AllUsers |Select-Object Name,Version,PackageFamilyName,PackageFullName,InstallLocation -ExcludeProperty "CIM*" |ConvertTo-Json -EnumsAsStrings |Out-File -FilePath "C:\Users\Public\SystemAppxPackageList.json"
