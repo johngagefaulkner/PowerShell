@@ -7,6 +7,7 @@ These scripts interact with both AppxPackages and AppxProvisionedPackages in Win
 ## AppxProvisionedPackages
 - **Description:** Obtains a list of all `AppxProvisionedPackages` from the online (running) Operating System.
 - **Script Output:** Results are trimmed, including only the `Version`, `Package Name`, `Display Name` and `Install Location`, converted to JSON and exported to a file in the `C:\Users\Public\` directory.
+- **Reference:** https://docs.microsoft.com/en-us/powershell/module/dism/get-appxprovisionedpackage?view=windowsserver2019-ps
 - **Script Example:** Requires PowerShell to be running elevated (as an Administrator.)
 
 ```powershell
@@ -25,6 +26,7 @@ Get-AppxPackage -AllUsers |Select-Object Name,Version,PackageFamilyName,PackageF
 ## Installed Apps
 - **Description:** Gets the names and AppIDs of installed apps.
 - **Script Output:** The Get-StartApps cmdlet gets the names and AppIDs of installed apps of the current user. An AppID is an AppUserModelID. You can specify a particular app by using its name, or you can specify a name that includes the wildcard character (*). If you do not specify a name, the cmdlet displays all installed apps.
+- **Reference:** https://docs.microsoft.com/en-us/powershell/module/startlayout/get-startapps?view=windowsserver2019-ps
 - **Script Example:** Does **not** require PowerShell to be running elevated.
 
 ```powershell
