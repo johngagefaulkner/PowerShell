@@ -21,3 +21,12 @@ Get-AppxProvisionedPackage -Online |Select-Object Version,PackageName,DisplayNam
 ```powershell
 Get-AppxPackage -AllUsers |Select-Object Name,Version,PackageFamilyName,PackageFullName,InstallLocation -ExcludeProperty "CIM*" |ConvertTo-Json -EnumsAsStrings |Out-File -FilePath "C:\Users\Public\SystemAppxPackageList.json"
 ```
+---
+## Installed Apps
+- **Description:** Gets the names and AppIDs of installed apps.
+- **Script Output:** The Get-StartApps cmdlet gets the names and AppIDs of installed apps of the current user. An AppID is an AppUserModelID. You can specify a particular app by using its name, or you can specify a name that includes the wildcard character (*). If you do not specify a name, the cmdlet displays all installed apps.
+- **Script Example:** Does **not** require PowerShell to be running elevated.
+
+```powershell
+Get-StartApps |ConvertTo-Json
+```
