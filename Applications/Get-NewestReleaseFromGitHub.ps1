@@ -7,6 +7,11 @@
         - Build the download URL: "https://github.com/$repo/releases/download/$tag/$file"
         - Download URL Example: https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
         - Install an .AppX Package: Add-AppxPackage -Path $output
+        - PowerShell MSIX Commands: https://www.advancedinstaller.com/msix-powershell-cmdlets.html
+            - Add-AppPackage -path "C:\Caphyon\MyApp.msix"
+            - Add-AppPackage -path “C:\Caphyon\MyBundle.msixbundle”
+            - Remove-AppPackage -Package "Caphyon.MyApp_1.0.0.0_neutral__8wekyb3d8bbwe"
+            - Remove-AppPackage -Package "Caphyon.MyApp_1.0.0.0_neutral__8wekyb3d8bbwe" -AllUsers . 
     - # Get-Date -DisplayHint Time
 #>
 Clear-Host
