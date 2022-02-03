@@ -10,12 +10,16 @@
     - # Get-Date -DisplayHint Time
 #>
 Clear-Host
-Write-Host "[ Get-NewestReleaseFromGitHub.ps1 ]"
 
 # Define Environment Variables
 $ProgressPreference = 'SilentlyContinue'
 $ErrorActionPreference = 'SilentlyContinue'
 $targetExtensions = @(".msixbundle", ".msix", ".msi", ".exe", ".appxbundle", ".appx")
+$transcriptLogPath = $env:APPDATA + "\Get-NewestReleaseFromGitHub.txt"
+
+# Initialize the script
+Start-Transcript -Path $transcriptLogPath -Append -Force
+Write-Host "[ Get-NewestReleaseFromGitHub.ps1 ]"
 
 # Step 1: Ask for user input
 $repo = Read-Host -Prompt "Please Enter the GitHub Repo Name (e.g. microsoft/winget-cli)"
@@ -70,6 +74,9 @@ catch {
     Write-Warning -Message $issueStr
     Write-Host
 }
+
+# End of Script
+Stop-Transcript
 
 <# 
     Examples
