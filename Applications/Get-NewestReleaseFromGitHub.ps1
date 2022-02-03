@@ -22,7 +22,8 @@ Start-Transcript -Path $transcriptLogPath -Append -Force
 Write-Host "[ Get-NewestReleaseFromGitHub.ps1 ]"
 
 # Step 1: Ask for user input
-$repo = Read-Host -Prompt "Please Enter the GitHub Repo Name (e.g. microsoft/winget-cli)"
+#$repo = Read-Host -Prompt "Please Enter the GitHub Repo Name (e.g. microsoft/winget-cli)"
+$repo = "microsoft/winget-cli"
 $GitHubReleasesURL = "https://api.github.com/repos/$repo/releases" # The URL to the GitHub API for Releases.
 Write-Host "Targeted Repo: " -NoNewline
 Write-Host "$GitHubReleasesURL" -ForegroundColor Green
@@ -65,7 +66,8 @@ try {
 
     Write-Host
     Write-Host "Installing the package, please wait... "
-    
+    #To-Do: Add code to install the package
+    Write-Host "Done!" -ForegroundColor Green
 }
 
 catch {
