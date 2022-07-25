@@ -10,7 +10,6 @@ Write-Host "[ New-TestScript.ps1 ]: Starting..."
 Write-Host "[ New-TestScript.ps1 ]: Creating file at C:\ProgramData\PowerShellTestScript.txt"
 $file = "C:\ProgramData\PowerShellTestScript.txt"
 $content = "This is a test file created by PowerShell script deployment method(s)..."
-$encoding = [System.Text.Encoding]::UTF8
-$content | Out-File $file -Encoding $encoding -Force
+$content | Out-File $file -Force
 Write-Host "[ New-TestScript.ps1 ]: File created successfully!"
 exit 0
