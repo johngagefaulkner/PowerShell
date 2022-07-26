@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="100%" height="100%" viewBox="0 0 1536 512" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="5.4569683E-15" y1="0.49994725" x2="1" y2="0.49994725" id="gradient_1">
+      <stop offset="0" stop-color="#C50D17" />
+      <stop offset="1" stop-color="#C50D17" />
+    </linearGradient>
+    <linearGradient x1="5.4569683E-15" y1="0.49994725" x2="1" y2="0.49994725" id="gradient_2">
+      <stop offset="0" stop-color="#01176D" />
+      <stop offset="1" stop-color="#01176D" />
+    </linearGradient>
+  </defs>
+  <g id="AIM-Logo-v2">
+    <path d="M0 0L1536 0L1536 512L0 512L0 0L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+    <g id="Icon" transform="translate(171.04001 63.12001)">
+      <g id="M" transform="translate(811.52 0)">
+        <path d="M384 0L0 0L0 384L384 384L384 0ZM88.18 75.46L186.28 318.46L197.98 318.46L296.439 75.8201L297.879 75.8201C296.439 90.7001 295.72 105.1 295.72 119.02L295.72 318.46L314.26 318.46L314.26 55.3L286.54 55.3L193.3 286.78L192.22 286.78L98.9801 55.3L70.54 55.3L70.54 318.46L88.18 318.46L88.18 121.18C88.18 105.58 87.7 90.34 86.74 75.46L88.18 75.46Z" id="Rectangle-2#2-Difference" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+      </g>
+      <g id="I" transform="translate(405.76004 0.42663574)">
+        <path d="M384 0L0 0L0 384L384 384L384 0ZM182.54 55.3L182.54 318.46L200.9 318.46L200.9 55.3L182.54 55.3Z" id="Rectangle-2#1-Difference" fill="#CBC9C9" fill-rule="evenodd" stroke="none" />
+      </g>
+      <g id="A">
+        <path d="M384 0L0 0L0 384L384 384L384 0ZM138.34 225.58L245.26 225.58L281.8 318.461L302.5 318.461L198.82 54.22L187.12 54.22L81.28 318.461L101.62 318.461L138.34 225.58ZM239.14 209.019L145 209.019L181.9 114.52C185.74 105.16 189.28 94.72 192.52 83.2C196.72 96.4 200.32 106.72 203.32 114.16L239.14 209.019Z" id="Rectangle-2-Difference" fill="url(#gradient_2)" fill-rule="evenodd" stroke="none" />
+      </g>
+    </g>
+  </g>
+</svg>
