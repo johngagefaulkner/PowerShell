@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="d" x1="59.07" x2="34.398" y1="68.195" y2="25.461" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#114a8b" offset=".37229"/>
+      <stop stop-color="#0c59a4" offset="1"/>
+    </linearGradient>
+    <linearGradient id="c" x1="34.734" x2="13.753" y1="60.426" y2="24.086" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0669bc" offset="0"/>
+      <stop stop-color="#0078d4" offset="1"/>
+    </linearGradient>
+    <linearGradient id="b" x1="53.77" x2="33.027" y1="35.696" y2="-.23109" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0078d4" offset="0"/>
+      <stop stop-color="#1493df" offset="1"/>
+    </linearGradient>
+    <linearGradient id="a" x1="27.433" x2="6.6898" y1="32.637" y2="-3.2906" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28afea" offset="0"/>
+      <stop stop-color="#3ccbf4" offset=".73921"/>
+    </linearGradient>
+  </defs>
+  <title>AppNameAppList.targetsize-64</title>
+  <path d="M32,62.00452a2.0371,2.0371,0,0,0,1.00977-.26477c14.97461-8.63453,24.95971-18.325,27.39746-31.0597q.063-.329.11914-.65905L30,28Z" fill="url(#d)"/>
+  <path d="m30.989 61.739a2.0358 2.0358 0 0 0 1.0107 0.26514v-34.005l-28.526 2.021q0.0564 0.33 0.11914 0.65905c2.438 12.734 12.423 22.425 27.396 31.059z" fill="url(#c)"/>
+  <path d="m61 11.546a1.9694 1.9694 0 0 0-1.9155-1.976c-9.0564-0.18591-12.26-1.7506-16.727-4.7659a17.695 17.695 0 0 0-10.357-3.1245l-3 28.32h31.53a32.02 32.02 0 0 0 0.46973-5.4056z" fill="url(#b)"/>
+  <path d="m32 1.68a17.694 17.694 0 0 0-10.357 3.1245c-4.4673 3.0152-7.6706 4.58-16.727 4.7659a1.9696 1.9696 0 0 0-1.9155 1.976v13.048a32.02 32.02 0 0 0 0.46973 5.4056h28.53z" fill="url(#a)"/>
+</svg>
