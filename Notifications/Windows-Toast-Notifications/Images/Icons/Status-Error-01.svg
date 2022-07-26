@@ -1,0 +1,17 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ef355d;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>status_failed</title>
+  <circle class="cls-1" cx="13.5" cy="13.5" r="13.5"/>
+  <path class="cls-2" d="M15.62128,13.5l3.47491-3.47491a1.5,1.5,0,1,0-2.12134-2.12128L13.5,11.37866,10.02509,7.90381a1.5,1.5,0,0,0-2.12134,2.12128L11.37866,13.5,7.90375,16.97491a1.5,1.5,0,0,0,2.12134,2.12128L13.5,15.62128l3.47485,3.47491a1.5,1.5,0,0,0,2.12134-2.12128Z"/>
+</svg>
