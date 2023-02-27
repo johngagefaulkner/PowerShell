@@ -29,8 +29,8 @@ $ErrorActionPreference = 'Stop'
 $APP_DOWNLOAD_URL = "https://github.com/pseymour/MakeMeAdmin/raw/v2.3-fr/Installers/en-us/MakeMeAdmin%202.3.0%20x64.msi"
 $APP_DETECTION_PATH = "C:\Program Files\Make Me Admin\MakeMeAdminService.exe"
 $APP_EXIT_CODE = 0
-$REG_SETTINGS_ROOT = "HKEY_LOCAL_MACHINE\SOFTWARE\Sinclair Community College\Make Me Admin"
-$REG_POLICIES_ROOT = "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
+$REG_SETTINGS_ROOT = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Sinclair Community College\Make Me Admin"
+$REG_POLICIES_ROOT = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Sinclair Community College\Make Me Admin"
 
 # Define Functions
 function Invoke-Executable {
@@ -100,7 +100,7 @@ else {
 Write-Host "Configuring MakeMeAdmin behavior settings via Registry, please wait..."
 
 if (!(Test-Path -Path $REG_SETTINGS_ROOT)) {
-    New-Item -Path $REG_SETTINGS_ROOT -ItemType Directory -Force
+    New-Item -Path $REG_SETTINGS_ROOT -Force
     Write-Host "Created: $REG_SETTINGS_ROOT"
 }
 else {
