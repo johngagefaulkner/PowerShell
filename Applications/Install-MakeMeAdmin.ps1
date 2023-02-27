@@ -86,6 +86,12 @@ if (!(Test-Path $APP_DETECTION_PATH)) {
     Write-Host "Installing MakeMeAdmin, please wait..."
     Set-Location -Path "C:\Windows\System32"
     $APP_EXIT_CODE = Invoke-Executable -FilePath "C:\Windows\System32\cmd.exe" -Arguments "msiexec /i ""$APP_DOWNLOAD_URL"" /qn"
+
+    if ($APP_EXIT_CODE.ToString() -ne "0") {
+        Write-Host "Installation failed. Please check the logs and try again."
+        Exit 1
+    }
+
     Write-Host "Installation complete!"
 }
 else {
