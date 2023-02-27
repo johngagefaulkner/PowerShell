@@ -54,7 +54,7 @@ function Invoke-Executable {
 
         # Add the arguments to the process info object
         if ($Arguments.Count -gt 0) {
-            $ProcessStartInfoObject.Arguments = $Arguments
+            $ProcessStartInfoObject.Arguments = $Arguments.ToString()
         }
 
         # Create the object that will represent the process
@@ -69,15 +69,11 @@ function Invoke-Executable {
 
         # Return an object that contains the exit code
         Write-Host "[Invoke-Executable] Exit Code: $Process.ExitCode"
-        return [PSCustomObject]@{
-            ExitCode = $Process.ExitCode
-        }
+        return "$Process.ExitCode"
     }
     catch [System.Exception] {
         Write-Host "$($MyInvocation.MyCommand): Error message: $($_.Exception.Message)"
-        return [PSCustomObject]@{
-            ExitCode = 99
-        }
+        return "99"
     }
 }
 
