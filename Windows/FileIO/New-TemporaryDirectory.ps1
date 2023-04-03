@@ -14,5 +14,8 @@ function New-TemporaryDirectory {
 Clear-Host
 Write-Host "[ New-TemporaryDirectory.ps1 ]"
 Write-Host "Creating new temporary directory..."
-$dir = New-TemporaryDirectory
+$tempDir = New-TemporaryDirectory
 Write-Host "Temporary directory created: $dir"
+
+Read-Host -Prompt "Press Enter to continue and delete the temporary folder"
+Remove-Item $tempDir -Recurse -Force
