@@ -17,7 +17,7 @@ Write-Host "Done!"
 Write-Host "Enabling the Local Administrator account and setting the password... " -NoNewline
 $adminAccount = Get-LocalUser -Name "Administrator" # Get the local administrator account
 $adminAccount | Enable-LocalUser # Enable the administrator account
-$adminAccount | Set-LocalUser -Password $password # Set the password for the administrator account
+$adminAccount | Set-LocalUser -Password $SecurePassword # Set the password for the administrator account
 Write-Host "Done!"
 
 # Verify if the account is enabled
