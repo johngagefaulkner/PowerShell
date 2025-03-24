@@ -12,7 +12,7 @@ $DownloadFullPath = "C:\ManageEngineEndpointCentralAgent_Setup.exe"
 
 if (-not(Test-Path $DownloadFullPath)) {
 	Write-Host "Downloading agent, please wait... "
-	Invoke-WebRequest -Uri $DownloadUrl -HttpVersion 2.0 -UseBasicParsing -OutFile $DownloadFullPath -ProgressAction SilentlyContinue
+  	(New-Object System.Net.WebClient).DownloadFile($DownloadUrl, $DownloadFullPath)
 	Write-Host "Done!"
 }
 
