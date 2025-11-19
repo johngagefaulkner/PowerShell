@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 <#
   - Written for a friend of mine who was running out of storage space on his Windows OS `C:` partition.
   - Intended to be used from CMD via, for example, something like this: 
-    - powershell -ep bypass -nop -command "iwr 
+    - powershell -ep bypass -nop -command "iwr https://raw.githubusercontent.com/johngagefaulkner/PowerShell/refs/heads/main/Windows/Optimizations/Start-TempStorageCleanup.ps1 | iex"
 #>
 
 Clear-Host
